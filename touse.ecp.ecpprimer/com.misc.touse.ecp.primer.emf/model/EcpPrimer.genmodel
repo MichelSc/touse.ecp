@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.touse.ecp.primer.emf/src" modelPluginID="com.misc.touse.ecp.primer.emf"
+    modelName="EcpPrimer" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>EcpPrimer.ecore</foreignModel>
+  <genPackages prefix="EcpPrimer" basePackage="com.misc.touse.ecp" disposableProviderFactory="true"
+      ecorePackage="EcpPrimer.ecore#/">
+    <genClasses ecoreClass="EcpPrimer.ecore#//Domain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Domain/Resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Domain/Skills"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Domain/Products"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Domain/Plans"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Resource/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Employee">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Employee/MasteredSkills"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Machine"/>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Order/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Order/Products"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Order/DueDate"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Product">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Product/RequiredSkills"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Product/RequiredMachines"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Product/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Product/ProductionHours"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//ProductSkill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//ProductSkill/Level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//ProductSkill/Skill"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Skill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Skill/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//EmployeeSkill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//EmployeeSkill/Level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//EmployeeSkill/Skill"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//OrderProduct">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//OrderProduct/Product"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//OrderProduct/Quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//Plan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//Plan/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Plan/Orders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//Plan/Resources"/>
+    </genClasses>
+    <genClasses ecoreClass="EcpPrimer.ecore#//ResourceAvailable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//ResourceAvailable/AvailableFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EcpPrimer.ecore#//ResourceAvailable/AvailableTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EcpPrimer.ecore#//ResourceAvailable/Resource"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

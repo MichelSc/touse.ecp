@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
+  <eef-components:PropertiesEditionContext xmi:id="_uExTcNJzEeWbLL5Lj4DBkw" documentation="Edition Context for eefprimer GenPackage">
+    <categories xmi:id="_uEx6gNJzEeWbLL5Lj4DBkw" name="eefprimer">
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6gdJzEeWbLL5Lj4DBkw" name="Domain" views="_uEx6q9JzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6gtJzEeWbLL5Lj4DBkw" name="Resources" views="_uEx6rdJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Domain/Resources"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6g9JzEeWbLL5Lj4DBkw" name="Skills" views="_uEx6rtJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Domain/Skills"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6hNJzEeWbLL5Lj4DBkw" name="Products" views="_uEx6r9JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Domain/Products"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6hdJzEeWbLL5Lj4DBkw" name="Plans" views="_uEx6sNJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Domain/Plans"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Domain"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6htJzEeWbLL5Lj4DBkw" name="Employee" views="_uEx6sdJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6h9JzEeWbLL5Lj4DBkw" name="Name" views="_uEx6s9JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Resource/Name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6iNJzEeWbLL5Lj4DBkw" name="MasteredSkills" views="_uEx6tNJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Employee/MasteredSkills"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6idJzEeWbLL5Lj4DBkw" name="BirthDate" views="_CKnBENMIEeWkYZOGl_d48g">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Employee/BirthDate"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Employee"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6itJzEeWbLL5Lj4DBkw" name="Machine" views="_uEx6ttJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6i9JzEeWbLL5Lj4DBkw" name="Name" views="_uEx6uNJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Resource/Name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6jNJzEeWbLL5Lj4DBkw" name="Color" views="_uEx6udJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Machine/Color"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Machine"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6jdJzEeWbLL5Lj4DBkw" name="Order" views="_uEx6utJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6jtJzEeWbLL5Lj4DBkw" name="ID" views="_uEx6vNJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Order/ID"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6j9JzEeWbLL5Lj4DBkw" name="Products" views="_uEx6vdJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Order/Products"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6kNJzEeWbLL5Lj4DBkw" name="DueDate" views="_uEx6vtJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Order/DueDate"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Order"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6kdJzEeWbLL5Lj4DBkw" name="Product" views="_uEx6v9JzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6ktJzEeWbLL5Lj4DBkw" name="RequiredSkills" views="_uEx6wdJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Product/RequiredSkills"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6k9JzEeWbLL5Lj4DBkw" name="RequiredMachines" views="_uEx6wtJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Product/RequiredMachines"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6lNJzEeWbLL5Lj4DBkw" name="Name" views="_uEx6w9JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Product/Name"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6ldJzEeWbLL5Lj4DBkw" name="ProductionHours" views="_uEx6xNJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Product/ProductionHours"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Product"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6ltJzEeWbLL5Lj4DBkw" name="ProductSkill" views="_uEx6xdJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6l9JzEeWbLL5Lj4DBkw" name="Level" views="_uEx6x9JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ProductSkill/Level"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6mNJzEeWbLL5Lj4DBkw" name="Skill" views="_uEx6yNJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ProductSkill/Skill"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ProductSkill"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6mdJzEeWbLL5Lj4DBkw" name="Skill" views="_uEx6ydJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6mtJzEeWbLL5Lj4DBkw" name="Name" views="_uEx6y9JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Skill/Name"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Skill"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6m9JzEeWbLL5Lj4DBkw" name="EmployeeSkill" views="_uEx6zNJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6nNJzEeWbLL5Lj4DBkw" name="Level" views="_uEx6ztJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//EmployeeSkill/Level"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6ndJzEeWbLL5Lj4DBkw" name="Skill" views="_uEx6z9JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//EmployeeSkill/Skill"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//EmployeeSkill"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6ntJzEeWbLL5Lj4DBkw" name="OrderProduct" views="_uEx60NJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6n9JzEeWbLL5Lj4DBkw" name="Product" views="_uEx60tJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//OrderProduct/Product"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6oNJzEeWbLL5Lj4DBkw" name="Quantity" views="_uEx609JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//OrderProduct/Quantity"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//OrderProduct"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6odJzEeWbLL5Lj4DBkw" name="Plan" views="_uEx61NJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6otJzEeWbLL5Lj4DBkw" name="ID" views="_uEx61tJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Plan/ID"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6o9JzEeWbLL5Lj4DBkw" name="Orders" views="_uEx619JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Plan/Orders"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6pNJzEeWbLL5Lj4DBkw" name="Resources" views="_uEx62NJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Plan/Resources"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Plan"/>
+      </bindings>
+      <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6pdJzEeWbLL5Lj4DBkw" name="ResourceAvailable" views="_uEx62dJzEeWbLL5Lj4DBkw">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6ptJzEeWbLL5Lj4DBkw" name="AvailableFrom" views="_uEx629JzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ResourceAvailable/AvailableFrom"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6p9JzEeWbLL5Lj4DBkw" name="AvailableTo" views="_uEx63NJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ResourceAvailable/AvailableTo"/>
+        </properties>
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6qNJzEeWbLL5Lj4DBkw" name="Resource" views="_uEx63dJzEeWbLL5Lj4DBkw">
+          <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ResourceAvailable/Resource"/>
+        </properties>
+        <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//ResourceAvailable"/>
+      </bindings>
+    </categories>
+    <model href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.genmodel#//eefprimer"/>
+  </eef-components:PropertiesEditionContext>
+  <eef-views:ViewsRepository xmi:id="_uEx6qdJzEeWbLL5Lj4DBkw" documentation="Views repository for eefprimer GenPackage" name="eefprimer">
+    <RepositoryKind>SWT</RepositoryKind>
+    <RepositoryKind>Form</RepositoryKind>
+    <categories xmi:id="_uEx6qtJzEeWbLL5Lj4DBkw" name="eefprimer">
+      <views xmi:id="_uEx6q9JzEeWbLL5Lj4DBkw" name="Domain">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6rNJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6rdJzEeWbLL5Lj4DBkw" name="Resources">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6rtJzEeWbLL5Lj4DBkw" name="Skills">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6r9JzEeWbLL5Lj4DBkw" name="Products">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6sNJzEeWbLL5Lj4DBkw" name="Plans">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6sdJzEeWbLL5Lj4DBkw" name="Employee">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6stJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6s9JzEeWbLL5Lj4DBkw" name="Name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6tNJzEeWbLL5Lj4DBkw" name="MasteredSkills">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:CustomElementEditor" xmi:id="_CKnBENMIEeWkYZOGl_d48g" name="CustomElementEditor Employee BirthDate"/>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6ttJzEeWbLL5Lj4DBkw" name="Machine">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6t9JzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6uNJzEeWbLL5Lj4DBkw" name="Name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6udJzEeWbLL5Lj4DBkw" name="Color">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6utJzEeWbLL5Lj4DBkw" name="Order">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6u9JzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6vNJzEeWbLL5Lj4DBkw" name="ID">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6vdJzEeWbLL5Lj4DBkw" name="Products">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6vtJzEeWbLL5Lj4DBkw" name="DueDate">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6v9JzEeWbLL5Lj4DBkw" name="Product">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6wNJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6wdJzEeWbLL5Lj4DBkw" name="RequiredSkills">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6wtJzEeWbLL5Lj4DBkw" name="RequiredMachines">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6w9JzEeWbLL5Lj4DBkw" name="Name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6xNJzEeWbLL5Lj4DBkw" name="ProductionHours">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6xdJzEeWbLL5Lj4DBkw" name="ProductSkill">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6xtJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6x9JzEeWbLL5Lj4DBkw" name="Level">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6yNJzEeWbLL5Lj4DBkw" name="Skill">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6ydJzEeWbLL5Lj4DBkw" name="Skill">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6ytJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6y9JzEeWbLL5Lj4DBkw" name="Name">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx6zNJzEeWbLL5Lj4DBkw" name="EmployeeSkill">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx6zdJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6ztJzEeWbLL5Lj4DBkw" name="Level">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx6z9JzEeWbLL5Lj4DBkw" name="Skill">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx60NJzEeWbLL5Lj4DBkw" name="OrderProduct">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx60dJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx60tJzEeWbLL5Lj4DBkw" name="Product">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx609JzEeWbLL5Lj4DBkw" name="Quantity">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx61NJzEeWbLL5Lj4DBkw" name="Plan">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx61dJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx61tJzEeWbLL5Lj4DBkw" name="ID">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx619JzEeWbLL5Lj4DBkw" name="Orders">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx62NJzEeWbLL5Lj4DBkw" name="Resources">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+        </elements>
+      </views>
+      <views xmi:id="_uEx62dJzEeWbLL5Lj4DBkw" name="ResourceAvailable">
+        <elements xsi:type="eef-views:Container" xmi:id="_uEx62tJzEeWbLL5Lj4DBkw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx629JzEeWbLL5Lj4DBkw" name="AvailableFrom">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx63NJzEeWbLL5Lj4DBkw" name="AvailableTo">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx63dJzEeWbLL5Lj4DBkw" name="Resource">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+    </categories>
+  </eef-views:ViewsRepository>
+</xmi:XMI>

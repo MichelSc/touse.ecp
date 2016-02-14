@@ -57,7 +57,6 @@ public class EcpPrimerFactoryImpl extends EFactoryImpl implements EcpPrimerFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case EcpPrimerPackage.DOMAIN: return createDomain();
-			case EcpPrimerPackage.RESOURCE: return createResource();
 			case EcpPrimerPackage.EMPLOYEE: return createEmployee();
 			case EcpPrimerPackage.MACHINE: return createMachine();
 			case EcpPrimerPackage.ORDER: return createOrder();
@@ -81,16 +80,6 @@ public class EcpPrimerFactoryImpl extends EFactoryImpl implements EcpPrimerFacto
 	public Domain createDomain() {
 		DomainImpl domain = new DomainImpl();
 		return domain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Resource createResource() {
-		ResourceImpl resource = new ResourceImpl();
-		return resource;
 	}
 
 	/**

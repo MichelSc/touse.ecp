@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<eef-gen:EEFGenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eef-gen="http://www.eclipse.org/emf/eef/generation/1.0.0" genDirectory="/com.misc.touse.eef.primer.emf.edit/src-gen">
+  <editionContexts basePackage="com.misc.touse.eef" descriptorsGenericPropertiesViews="true">
+    <PropertiesEditionContext href="EEFPrimer.components#_uExTcNJzEeWbLL5Lj4DBkw"/>
+  </editionContexts>
+  <viewsRepositories basePackage="com.misc.touse.eef.eefprimer" swtViews="true" formViews="true">
+    <viewsRepository href="EEFPrimer.components#_uEx6qdJzEeWbLL5Lj4DBkw"/>
+  </viewsRepositories>
+</eef-gen:EEFGenModel>

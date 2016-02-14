@@ -95,29 +95,6 @@ public class EcpPrimerItemProviderAdapterFactory extends EcpPrimerAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.touse.ecp.ecpprimer.Resource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResourceItemProvider resourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.touse.ecp.ecpprimer.Resource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResourceAdapter() {
-		if (resourceItemProvider == null) {
-			resourceItemProvider = new ResourceItemProvider(this);
-		}
-
-		return resourceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.touse.ecp.ecpprimer.Employee} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -447,7 +424,6 @@ public class EcpPrimerItemProviderAdapterFactory extends EcpPrimerAdapterFactory
 	 */
 	public void dispose() {
 		if (domainItemProvider != null) domainItemProvider.dispose();
-		if (resourceItemProvider != null) resourceItemProvider.dispose();
 		if (employeeItemProvider != null) employeeItemProvider.dispose();
 		if (machineItemProvider != null) machineItemProvider.dispose();
 		if (orderItemProvider != null) orderItemProvider.dispose();

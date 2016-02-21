@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-ext-edt="http://www.eclipse.org/emf/eef/extended/editor/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
   <eef-components:PropertiesEditionContext xmi:id="_uExTcNJzEeWbLL5Lj4DBkw" documentation="Edition Context for eefprimer GenPackage">
     <categories xmi:id="_uEx6gNJzEeWbLL5Lj4DBkw" name="eefprimer">
       <bindings xsi:type="eef-components:PropertiesEditionComponent" xmi:id="_uEx6gdJzEeWbLL5Lj4DBkw" name="Domain" views="_uEx6q9JzEeWbLL5Lj4DBkw">
@@ -24,7 +24,7 @@
         <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6iNJzEeWbLL5Lj4DBkw" name="MasteredSkills" views="_uEx6tNJzEeWbLL5Lj4DBkw">
           <model xsi:type="ecore:EReference" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Employee/MasteredSkills"/>
         </properties>
-        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6idJzEeWbLL5Lj4DBkw" name="BirthDate" views="_CKnBENMIEeWkYZOGl_d48g">
+        <properties xsi:type="eef-components:PropertiesEditionElement" xmi:id="_uEx6idJzEeWbLL5Lj4DBkw" name="BirthDate" views="_XmnEENf0EeW1DoQk_CLZyg">
           <model xsi:type="ecore:EAttribute" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Employee/BirthDate"/>
         </properties>
         <model xsi:type="ecore:EClass" href="platform:/resource/com.misc.touse.eef.primer.emf/model/EEFPrimer.ecore#//Employee"/>
@@ -156,6 +156,9 @@
             <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
           </elements>
           <elements xsi:type="eef-views:CustomElementEditor" xmi:id="_CKnBENMIEeWkYZOGl_d48g" name="CustomElementEditor Employee BirthDate"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_XmnEENf0EeW1DoQk_CLZyg" name="BirthDate">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.0"/>
+          </elements>
         </elements>
       </views>
       <views xmi:id="_uEx6ttJzEeWbLL5Lj4DBkw" name="Machine">
@@ -266,6 +269,23 @@
           </elements>
           <elements xsi:type="eef-views:ElementEditor" xmi:id="_uEx63dJzEeWbLL5Lj4DBkw" name="Resource">
             <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+        </elements>
+      </views>
+      <views xsi:type="eef-ext-edt:StandardFormPage" xmi:id="_rUtugNiFEeWIY_v8mDyHbw">
+        <elements xsi:type="eef-views:Container" xmi:id="_CRvq8NiGEeWIY_v8mDyHbw" name="properties">
+          <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CRvq8diGEeWIY_v8mDyHbw" name="Resources">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CRvq8tiGEeWIY_v8mDyHbw" name="Skills">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CRvq89iGEeWIY_v8mDyHbw" name="Products">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_CRvq9NiGEeWIY_v8mDyHbw" name="Plans">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.7"/>
           </elements>
         </elements>
       </views>

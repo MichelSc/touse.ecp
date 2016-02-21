@@ -136,6 +136,9 @@ public class EefprimerMessages extends NLS {
 	public static String EmployeePropertiesEditionPart_CustomElementEditorEmployeeBirthDateLabel;
 
 	
+	public static String EmployeePropertiesEditionPart_BirthDateLabel;
+
+	
 	public static String MachinePropertiesEditionPart_NameLabel;
 
 	

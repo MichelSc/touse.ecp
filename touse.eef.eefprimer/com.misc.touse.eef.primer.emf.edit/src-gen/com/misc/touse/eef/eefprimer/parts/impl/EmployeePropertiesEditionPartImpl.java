@@ -75,6 +75,7 @@ public class EmployeePropertiesEditionPartImpl extends CompositePropertiesEditio
 	
 	// End of user code
 
+	protected Text birthDate;
 
 
 
@@ -116,6 +117,7 @@ public class EmployeePropertiesEditionPartImpl extends CompositePropertiesEditio
 		propertiesStep.addStep(EefprimerViewsRepository.Employee.Properties.name);
 		propertiesStep.addStep(EefprimerViewsRepository.Employee.Properties.masteredSkills);
 		propertiesStep.addStep(EefprimerViewsRepository.Employee.Properties.customElementEditorEmployeeBirthDate);
+		propertiesStep.addStep(EefprimerViewsRepository.Employee.Properties.birthDate);
 		
 		
 		composer = new PartComposer(employeeStep) {
@@ -134,6 +136,9 @@ public class EmployeePropertiesEditionPartImpl extends CompositePropertiesEditio
 				// Start of user code for CustomElementEditor Employee BirthDate addToPart creation
 				
 				// End of user code
+				if (key == EefprimerViewsRepository.Employee.Properties.birthDate) {
+					return createBirthDateText(parent);
+				}
 				return parent;
 			}
 		};
@@ -255,6 +260,55 @@ public class EmployeePropertiesEditionPartImpl extends CompositePropertiesEditio
 		return parent;
 	}
 
+	
+	protected Composite createBirthDateText(Composite parent) {
+		createDescription(parent, EefprimerViewsRepository.Employee.Properties.birthDate, EefprimerMessages.EmployeePropertiesEditionPart_BirthDateLabel);
+		birthDate = SWTUtils.createScrollableText(parent, SWT.BORDER);
+		GridData birthDateData = new GridData(GridData.FILL_HORIZONTAL);
+		birthDate.setLayoutData(birthDateData);
+		birthDate.addFocusListener(new FocusAdapter() {
+
+			/**
+			 * {@inheritDoc}
+			 * 
+			 * @see org.eclipse.swt.events.FocusAdapter#focusLost(org.eclipse.swt.events.FocusEvent)
+			 * 
+			 */
+			@Override
+			@SuppressWarnings("synthetic-access")
+			public void focusLost(FocusEvent e) {
+				if (propertiesEditionComponent != null)
+					propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(EmployeePropertiesEditionPartImpl.this, EefprimerViewsRepository.Employee.Properties.birthDate, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.SET, null, birthDate.getText()));
+			}
+
+		});
+		birthDate.addKeyListener(new KeyAdapter() {
+
+			/**
+			 * {@inheritDoc}
+			 * 
+			 * @see org.eclipse.swt.events.KeyAdapter#keyPressed(org.eclipse.swt.events.KeyEvent)
+			 * 
+			 */
+			@Override
+			@SuppressWarnings("synthetic-access")
+			public void keyPressed(KeyEvent e) {
+				if (e.character == SWT.CR) {
+					if (propertiesEditionComponent != null)
+						propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(EmployeePropertiesEditionPartImpl.this, EefprimerViewsRepository.Employee.Properties.birthDate, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.SET, null, birthDate.getText()));
+				}
+			}
+
+		});
+		EditingUtils.setID(birthDate, EefprimerViewsRepository.Employee.Properties.birthDate);
+		EditingUtils.setEEFtype(birthDate, "eef::Text"); //$NON-NLS-1$
+		SWTUtils.createHelpButton(parent, propertiesEditionComponent.getHelpContent(EefprimerViewsRepository.Employee.Properties.birthDate, EefprimerViewsRepository.SWT_KIND), null); //$NON-NLS-1$
+		// Start of user code for createBirthDateText
+
+		// End of user code
+		return parent;
+	}
+
 
 	/**
 	 * {@inheritDoc}
@@ -366,6 +420,38 @@ public class EmployeePropertiesEditionPartImpl extends CompositePropertiesEditio
 		return ((ReferencesTableSettings)masteredSkills.getInput()).contains(element);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see com.misc.touse.eef.eefprimer.parts.EmployeePropertiesEditionPart#getBirthDate()
+	 * 
+	 */
+	public String getBirthDate() {
+		return birthDate.getText();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see com.misc.touse.eef.eefprimer.parts.EmployeePropertiesEditionPart#setBirthDate(String newValue)
+	 * 
+	 */
+	public void setBirthDate(String newValue) {
+		if (newValue != null) {
+			birthDate.setText(newValue);
+		} else {
+			birthDate.setText(""); //$NON-NLS-1$
+		}
+		boolean eefElementEditorReadOnlyState = isReadOnly(EefprimerViewsRepository.Employee.Properties.birthDate);
+		if (eefElementEditorReadOnlyState && birthDate.isEnabled()) {
+			birthDate.setEnabled(false);
+			birthDate.setToolTipText(EefprimerMessages.Employee_ReadOnly);
+		} else if (!eefElementEditorReadOnlyState && !birthDate.isEnabled()) {
+			birthDate.setEnabled(true);
+		}	
+		
+	}
+
 
 
 
@@ -383,18 +469,6 @@ public class EmployeePropertiesEditionPartImpl extends CompositePropertiesEditio
 	 */
 	public String getTitle() {
 		return EefprimerMessages.Employee_Part_Title;
-	}
-
-	@Override
-	public String getBirthDate() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setBirthDate(String newValue) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	// Start of user code additional methods

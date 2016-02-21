@@ -104,8 +104,8 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 				masteredSkillsSettings = new ReferencesTableSettings(employee, EefPrimerPackage.eINSTANCE.getEmployee_MasteredSkills());
 				basePart.initMasteredSkills(masteredSkillsSettings);
 			}
-			// Start of user code  for BirthDate command update
-			// End of user code
+			if (isAccessible(EefprimerViewsRepository.Employee.Properties.birthDate))
+				basePart.setBirthDate(EEFConverterUtil.convertToString(EcorePackage.Literals.EDATE, employee.getBirthDate()));
 			
 			// init filters
 			
@@ -124,8 +124,6 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 				// Start of user code for additional businessfilters for MasteredSkills
 				// End of user code
 			}
-			// Start of user code  for BirthDate filter update
-			// End of user code
 			
 			// init values for referenced views
 			
@@ -151,7 +149,7 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 		if (editorKey == EefprimerViewsRepository.Employee.Properties.masteredSkills) {
 			return EefPrimerPackage.eINSTANCE.getEmployee_MasteredSkills();
 		}
-		if (editorKey == EefprimerViewsRepository.Employee.Properties.customElementEditorEmployeeBirthDate) {
+		if (editorKey == EefprimerViewsRepository.Employee.Properties.birthDate) {
 			return EefPrimerPackage.eINSTANCE.getEmployee_BirthDate();
 		}
 		return super.associatedFeature(editorKey);
@@ -192,10 +190,8 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 				masteredSkillsSettings.move(event.getNewIndex(), (EmployeeSkill) event.getNewValue());
 			}
 		}
-		if (EefprimerViewsRepository.Employee.Properties.customElementEditorEmployeeBirthDate == event.getAffectedEditor()) {
-			// Start of user code for updateBirthDate method body
-			// End of user code
-			
+		if (EefprimerViewsRepository.Employee.Properties.birthDate == event.getAffectedEditor()) {
+			employee.setBirthDate((java.util.Date)EEFConverterUtil.createFromString(EcorePackage.Literals.EDATE, (String)event.getNewValue()));
 		}
 	}
 
@@ -216,10 +212,13 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 			}
 			if (EefPrimerPackage.eINSTANCE.getEmployee_MasteredSkills().equals(msg.getFeature()) && isAccessible(EefprimerViewsRepository.Employee.Properties.masteredSkills))
 				basePart.updateMasteredSkills();
-					// Start of user code for BirthDate live update
-					
-					// End of user code
-			
+			if (EefPrimerPackage.eINSTANCE.getEmployee_BirthDate().equals(msg.getFeature()) && msg.getNotifier().equals(semanticObject) && basePart != null && isAccessible(EefprimerViewsRepository.Employee.Properties.birthDate)) {
+				if (msg.getNewValue() != null) {
+					basePart.setBirthDate(EcoreUtil.convertToString(EcorePackage.Literals.EDATE, msg.getNewValue()));
+				} else {
+					basePart.setBirthDate("");
+				}
+			}
 			
 		}
 	}
@@ -238,6 +237,13 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 		return new NotificationFilter[] {filter,};
 	}
 
+	/**
+	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#mustBeComposed(java.lang.Object, int)
+	 */
+	public boolean mustBeComposed(Object key, int kind) {
+		return key == EefprimerViewsRepository.Employee.Properties.name || key == EefprimerViewsRepository.Employee.Properties.masteredSkills || key == EefprimerViewsRepository.Employee.Properties.birthDate || key == EefprimerViewsRepository.Employee.Properties.class;
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -256,7 +262,7 @@ public class EmployeePropertiesEditionComponent extends SinglePartPropertiesEdit
 					}
 					ret = Diagnostician.INSTANCE.validate(EefPrimerPackage.eINSTANCE.getResource_Name().getEAttributeType(), newValue);
 				}
-				if (EefprimerViewsRepository.Employee.Properties.customElementEditorEmployeeBirthDate == event.getAffectedEditor()) {
+				if (EefprimerViewsRepository.Employee.Properties.birthDate == event.getAffectedEditor()) {
 					Object newValue = event.getNewValue();
 					if (newValue instanceof String) {
 						newValue = EEFConverterUtil.createFromString(EefPrimerPackage.eINSTANCE.getEmployee_BirthDate().getEAttributeType(), (String)newValue);

@@ -77,21 +77,35 @@ public interface EmployeePropertiesEditionPart {
 	public boolean isContainedInMasteredSkillsTable(EObject element);
 
 
+	/**
+	 * @return the BirthDate
+	 * 
+	 */
+	public String getBirthDate();
+
+	/**
+	 * Defines a new BirthDate
+	 * @param newValue the new BirthDate to set
+	 * 
+	 */
+	public void setBirthDate(String newValue);
+
+
 
 
 	// Start of user code for CustomElementEditor Employee BirthDate specific getters and setters declaration
 	/**
 	 * @return the birth date
 	 * 
-	 */
 	public String getBirthDate();
+	 */
 
 	/**
 	 * Defines a new age
 	 * @param newValue the new birth date to set
 	 * 
-	 */
 	public void setBirthDate(String newValue);	
+	 */
 	// End of user code
 
 	/**

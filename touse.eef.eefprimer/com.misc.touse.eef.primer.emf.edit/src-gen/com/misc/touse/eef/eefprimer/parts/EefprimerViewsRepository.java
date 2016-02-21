@@ -55,6 +55,9 @@ public class EefprimerViewsRepository {
 			public static String customElementEditorEmployeeBirthDate = "eefprimer::Employee::properties::CustomElementEditor Employee BirthDate";
 			// End of user code
 			
+			
+			public static String birthDate = "eefprimer::Employee::properties::BirthDate";
+			
 	
 		}
 	

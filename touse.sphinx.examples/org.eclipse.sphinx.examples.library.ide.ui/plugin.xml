@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="org.eclipse.sphinx.examples.explorer.views.modelExplorer">
+         <includes>
+            <contentExtension
+                  pattern="org.eclipse.sphinx.examples.library.ide.ui.navigatorContent.extendedLibrary">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+   </extension>
+
+</plugin>

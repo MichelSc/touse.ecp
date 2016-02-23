@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated EEFPrimer -->
+      <factory
+            uri="http://www.misc.com/touse/eef/eefprimer/model/0.1"
+            class="com.misc.touse.eef.eefprimer.provider.EefPrimerItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+<!-- EEF extensions -->
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.misc.com/touse/eef/eefprimer/model/0.1"
+            class="com.misc.touse.eef.eefprimer.providers.EefprimerEEFAdapterFactory"
+            supportedTypes="org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.eef.runtime.PropertiesEditionPartProvider">
+      <PropertiesEditionPartProvider
+            providerClass="com.misc.touse.eef.eefprimer.providers.EefprimerPropertiesEditionPartProvider">
+      </PropertiesEditionPartProvider>
+   </extension>
+
+  <!-- Tabbed properties views extension -->
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="com.misc.touse.eef.eefprimer.properties"
+            labelProvider="org.eclipse.emf.eef.runtime.ui.utils.EEFLabelProvider">
+         <propertyCategory
+               category="default">
+         </propertyCategory>
+         <propertyCategory
+               category="extended">
+         </propertyCategory>
+         <propertyCategory
+               category="advanced">
+         </propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="com.misc.touse.eef.eefprimer.properties">
+         <propertyTab
+               id="Base"
+               label="Base"
+               category="default">
+         </propertyTab>
+
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="com.misc.touse.eef.eefprimer.properties">
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.DomainPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.DomainPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Domain"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.EmployeePropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.EmployeePropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Employee"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.MachinePropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.MachinePropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Machine"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.OrderPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.OrderPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Order"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.ProductPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.ProductPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Product"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.ProductSkillPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.ProductSkillPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.ProductSkill"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.SkillPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.SkillPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Skill"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.EmployeeSkillPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.EmployeeSkillPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.EmployeeSkill"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.OrderProductPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.OrderProductPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.OrderProduct"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.PlanPropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.PlanPropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.Plan"
+               tab="Base">
+         </propertySection>
+         <propertySection
+               class="com.misc.touse.eef.eefprimer.parts.forms.ResourceAvailablePropertiesEditionPartForm"
+               filter="com.misc.touse.eef.eefprimer.providers.ResourceAvailablePropertiesEditionProvider$EditionFilter"
+               id="com.misc.touse.eef.eefprimer.section.ResourceAvailable"
+               tab="Base">
+         </propertySection>
+      </propertySections>
+   </extension>
+
+</plugin>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eef-components="http://www.eclipse.org/emf/eef/components/1.0.0" xmlns:eef-ext-edt="http://www.eclipse.org/emf/eef/extended/editor/1.0.0" xmlns:eef-views="http://www.eclipse.org/emf/eef/views/1.0.0">
+  <eef-components:PropertiesEditionContext xmi:id="_L2wt4MzUEeWPc_luCcLT4A" documentation="Editor contribution for ecpprimer GenPackage">
+    <categories xsi:type="eef-ext-edt:EEFEditorContributions" xmi:id="_L20YQMzUEeWPc_luCcLT4A" name="ecpprimer contributions">
+      <bindings xsi:type="eef-ext-edt:StaticEEFEditorContribution" xmi:id="_L20YQczUEeWPc_luCcLT4A" name="Main contribution" views="_L20_UczUEeWPc_luCcLT4A">
+        <input xsi:type="eef-ext-edt:AllResourcesRootsRelativeInput" xmi:id="_L20YQszUEeWPc_luCcLT4A"/>
+      </bindings>
+    </categories>
+    <model href="platform:/resource/com.misc.touse.ecp.primer.emf/model/EcpPrimer.genmodel#//ecpprimer"/>
+  </eef-components:PropertiesEditionContext>
+  <eef-views:ViewsRepository xmi:id="_L20YQ8zUEeWPc_luCcLT4A" documentation="Editor pages for ecpprimer GenPackage" name="ecpprimer editor">
+    <views xmi:id="_08DoQNJbEeWNSukkVzcvTw" name="MichelView" label="MichelViewLabel"/>
+    <RepositoryKind>Editor</RepositoryKind>
+    <categories xsi:type="eef-ext-edt:EEFEditorPages" xmi:id="_L20_UMzUEeWPc_luCcLT4A" name="ecpprimer editor pages">
+      <views xsi:type="eef-ext-edt:TreeMasterPage" xmi:id="_L20_UczUEeWPc_luCcLT4A" name="main" title="ecpprimer"/>
+    </categories>
+    <categories xmi:id="_9NvKkNJbEeWNSukkVzcvTw" name="MichelCategory">
+      <views xmi:id="__C6jgNJbEeWNSukkVzcvTw" name="ViewMichel" label="ViewMichelLabel"/>
+    </categories>
+  </eef-views:ViewsRepository>
+</xmi:XMI>

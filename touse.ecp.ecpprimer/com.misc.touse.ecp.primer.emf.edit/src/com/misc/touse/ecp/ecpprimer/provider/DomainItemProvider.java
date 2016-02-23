@@ -157,11 +157,6 @@ public class DomainItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(EcpPrimerPackage.Literals.DOMAIN__RESOURCES,
-				 EcpPrimerFactory.eINSTANCE.createResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(EcpPrimerPackage.Literals.DOMAIN__RESOURCES,
 				 EcpPrimerFactory.eINSTANCE.createEmployee()));
 
 		newChildDescriptors.add

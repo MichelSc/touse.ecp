@@ -31,15 +31,6 @@ public interface EcpPrimerFactory extends EFactory {
 	Domain createDomain();
 
 	/**
-	 * Returns a new object of class '<em>Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource</em>'.
-	 * @generated
-	 */
-	Resource createResource();
-
-	/**
 	 * Returns a new object of class '<em>Employee</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

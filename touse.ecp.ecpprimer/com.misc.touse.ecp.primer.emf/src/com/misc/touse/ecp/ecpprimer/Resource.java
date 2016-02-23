@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see com.misc.touse.ecp.ecpprimer.EcpPrimerPackage#getResource()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Resource extends EObject {

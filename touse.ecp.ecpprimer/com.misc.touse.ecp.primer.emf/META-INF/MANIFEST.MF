@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package:  com.misc.touse.ecp.ecpprimer,
+Export-Package: com.misc.touse.ecp.ecpprimer,
  com.misc.touse.ecp.ecpprimer.impl,
  com.misc.touse.ecp.ecpprimer.util
 Require-Bundle: org.eclipse.core.runtime,

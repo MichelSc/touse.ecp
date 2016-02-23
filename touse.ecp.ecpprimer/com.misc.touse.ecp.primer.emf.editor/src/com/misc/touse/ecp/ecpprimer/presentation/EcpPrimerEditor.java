@@ -99,8 +99,8 @@ import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
-import org.eclipse.ui.views.properties.PropertySheetPage;
-
+import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
+import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
@@ -151,8 +151,7 @@ import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
-
-import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
+import org.eclipse.emf.eef.runtime.ui.notify.OpenWizardOnDoubleClick;
 
 import com.misc.touse.ecp.ecpprimer.provider.EcpPrimerItemProviderAdapterFactory;
 
@@ -162,12 +161,15 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 /**
  * This is an example of a EcpPrimer model editor.
  * <!-- begin-user-doc -->
+ * @implements ITabbedPropertySheetPageContributor
  * <!-- end-user-doc -->
  * @generated
  */
 public class EcpPrimerEditor
 	extends MultiPageEditorPart
-	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
+	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker, ITabbedPropertySheetPageContributor {
+	private static final String PROPERTIES_CONTRIBUTOR = "com.misc.touse.ecp.ecpprimer.properties";
+
 	/**
 	 * This keeps track of the editing domain that is used to track all changes to the model.
 	 * <!-- begin-user-doc -->
@@ -212,9 +214,9 @@ public class EcpPrimerEditor
 	 * This is the property sheet page.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected List<PropertySheetPage> propertySheetPages = new ArrayList<PropertySheetPage>();
+	protected TabbedPropertySheetPage propertySheetPage = null;
 
 	/**
 	 * This is the viewer that shadows the selection in the content outline.
@@ -320,7 +322,7 @@ public class EcpPrimerEditor
 	 * This listens for when the outline becomes active
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected IPartListener partListener =
 		new IPartListener() {
@@ -333,7 +335,7 @@ public class EcpPrimerEditor
 					}
 				}
 				else if (p instanceof PropertySheet) {
-					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
+					if (propertySheetPage==(((PropertySheet)p).getCurrentPage())) {
 						getActionBarContributor().setActiveEditor(EcpPrimerEditor.this);
 						handleActivate();
 					}
@@ -693,7 +695,7 @@ public class EcpPrimerEditor
 	 * This sets up the editing domain for the model editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void initializeEditingDomain() {
 		// Create an adapter factory that yields item providers.
@@ -724,10 +726,9 @@ public class EcpPrimerEditor
 								  if (mostRecentCommand != null) {
 									  setSelectionToViewer(mostRecentCommand.getAffectedObjects());
 								  }
-								  for (Iterator<PropertySheetPage> i = propertySheetPages.iterator(); i.hasNext(); ) {
-									  PropertySheetPage propertySheetPage = i.next();
+								  if ( propertySheetPage != null ) {
 									  if (propertySheetPage.getControl().isDisposed()) {
-										  i.remove();
+										  propertySheetPage = null;
 									  }
 									  else {
 										  propertySheetPage.refresh();
@@ -1050,6 +1051,8 @@ public class EcpPrimerEditor
 				createContextMenuFor(selectionViewer);
 				int pageIndex = addPage(viewerPane.getControl());
 				setPageText(pageIndex, getString("_UI_SelectionPage_label"));
+
+				 selectionViewer.addDoubleClickListener(new OpenWizardOnDoubleClick(editingDomain, adapterFactory));
 			}
 
 			// Create a page for the parent tree view.
@@ -1393,10 +1396,17 @@ public class EcpPrimerEditor
 	 * This accesses a cached version of the property sheet.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
+	 public IPropertySheetPage getPropertySheetPage() {
+	     if (propertySheetPage == null || propertySheetPage.getControl().isDisposed()) {
+	        propertySheetPage = new TabbedPropertySheetPage(EcpPrimerEditor.this);
+	     }
+	    return propertySheetPage;
+	 }
+	    /*
 	public IPropertySheetPage getPropertySheetPage() {
-		PropertySheetPage propertySheetPage =
+		TabbedPropertySheetPage propertySheetPage =
 			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
@@ -1414,7 +1424,7 @@ public class EcpPrimerEditor
 		propertySheetPages.add(propertySheetPage);
 
 		return propertySheetPage;
-	}
+	}*/
 
 	/**
 	 * This deals with how we want selection in the outliner to affect the other views.
@@ -1780,7 +1790,7 @@ public class EcpPrimerEditor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void dispose() {
@@ -1796,7 +1806,7 @@ public class EcpPrimerEditor
 			getActionBarContributor().setActiveEditor(null);
 		}
 
-		for (PropertySheetPage propertySheetPage : propertySheetPages) {
+		if (propertySheetPage != null) {
 			propertySheetPage.dispose();
 		}
 
@@ -1815,5 +1825,10 @@ public class EcpPrimerEditor
 	 */
 	protected boolean showOutlineView() {
 		return true;
+	}
+
+	@Override
+	public String getContributorId() {
+		return PROPERTIES_CONTRIBUTOR;
 	}
 }

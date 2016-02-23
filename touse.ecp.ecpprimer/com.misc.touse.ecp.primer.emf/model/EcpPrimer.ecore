@@ -18,8 +18,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Resource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="MasteredSkills" upperBound="-1"
         eType="#//EmployeeSkill" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BirthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Machine" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Machine" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Order">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Products" upperBound="-1"

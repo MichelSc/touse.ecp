@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="eefprimer" nsURI="http://www.misc.com/touse/eef/eefprimer/model/0.1"
+    nsPrefix="eef">
+  <eClassifiers xsi:type="ecore:EClass" name="Domain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
+        eType="#//Resource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Skills" upperBound="-1"
+        eType="#//Skill" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Products" upperBound="-1"
+        eType="#//Product" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Plans" upperBound="-1"
+        eType="#//Plan" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MasteredSkills" upperBound="-1"
+        eType="#//EmployeeSkill" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BirthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Machine" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Order">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Products" upperBound="-1"
+        eType="#//OrderProduct" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DueDate" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Product">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredSkills" upperBound="-1"
+        eType="#//ProductSkill" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredMachines" upperBound="-1"
+        eType="#//Machine"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProductionHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProductSkill">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Skill" eType="#//Skill"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Skill">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmployeeSkill">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Skill" eType="#//Skill"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderProduct">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Product" lowerBound="1"
+        eType="#//Product"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Quantity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Plan">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Orders" upperBound="-1"
+        eType="#//Order" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
+        eType="#//ResourceAvailable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceAvailable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AvailableFrom" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AvailableTo" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//Resource"/>
+  </eClassifiers>
+</ecore:EPackage>

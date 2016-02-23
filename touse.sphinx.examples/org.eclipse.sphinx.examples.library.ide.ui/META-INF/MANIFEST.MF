@@ -7,6 +7,8 @@ Bundle-Activator: org.eclipse.sphinx.examples.library.ide.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.navigator,
- org.eclipse.sphinx.emf.explorer;bundle-version="0.9.1"
+ org.eclipse.sphinx.emf.explorer;bundle-version="0.9.1",
+ org.eclipse.sphinx.emf.editors.forms;bundle-version="0.9.1",
+ org.eclipse.sphinx.examples.common.ui;bundle-version="0.9.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

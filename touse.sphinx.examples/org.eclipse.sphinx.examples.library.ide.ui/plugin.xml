@@ -45,5 +45,54 @@
          </dropAssistant>
       </navigatorContent>
    </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.sphinx.emf.editors.forms.BasicTransactionalFormEditor"
+            contributorClass="org.eclipse.sphinx.emf.editors.forms.BasicTransactionalEditorActionBarContributor"
+            default="false"
+            extensions="Library, Writer, Book"
+            id="org.eclipse.sphinx.examples.library.ide.ui.editors.extendedLibrary"
+            name="Extended Library Example Editor">
+         <contentTypeBinding
+               contentTypeId="org.eclipse.emf.examples.library.extendedLibrary">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="org.eclipse.sphinx.examples.library.ide.ui.editors.extendedLibrary"
+            labelProvider="org.eclipse.sphinx.examples.common.ui.providers.AppearanceExampleTabbedPropertySheetTitleProvider">
+         <propertyCategory
+               category="advanced">
+         </propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="org.eclipse.sphinx.examples.library.ide.ui.editors.extendedLibrary">
+         <propertyTab
+               category="advanced"
+               id="org.eclipse.sphinx.examples.library.ide.ui.propertyTabs.advanced"
+               label="Advancer">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="org.eclipse.sphinx.examples.library.ide.ui.editors.extendedLibrary">
+         <propertySection
+               class="org.eclipse.sphinx.emf.ui.properties.BasicTransactionalAdvancedPropertySection"
+               id="org.eclipse.sphinx.examples.library.ide.ui.propertySections.advanced"
+               tab="org.eclipse.sphinx.examples.library.ide.ui.propertyTabs.advanced">
+            <input
+                  type="java.lang.Object">
+            </input>
+         </propertySection>
+      </propertySections>
+   </extension>
 
 </plugin>

@@ -12,5 +12,38 @@
          </includes>
       </viewerContentBinding>
    </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            contentProvider="org.eclipse.sphinx.emf.explorer.BasicExplorerContentProvider"
+            id="org.eclipse.sphinx.examples.library.ide.ui.navigatorContent.extendedLibrary"
+            labelProvider="org.eclipse.sphinx.emf.explorer.BasicExplorerLabelProvider"
+            name="Extended Library Content">
+         <triggerPoints>
+            <and>
+               <instanceof
+                     value="org.eclipse.core.resources.IFile">
+               </instanceof>
+               <test
+                     property="org.eclipse.sphinx.emf.isInScope"
+                     value="true">
+               </test>
+               <test
+                     property="org.eclipse.sphinx.emf.classNameMatches"
+                     value="org\.eclipse\.emf\.examples\.extlibrary\..*">
+               </test>
+            </and>
+         </triggerPoints>
+         <dropAssistant
+               class="org.eclipse.sphinx.emf.explorer.BasicDropAdapterAssistant"
+               id="org.eclipse.sphinx.examples.library.ide.ui.navigatorContent.dropAssistant.extendedLibrary">
+            <possibleDropTargets>
+               <instanceof
+                     value="org.eclipse.emf.ecore.EObject">
+               </instanceof>
+            </possibleDropTargets>
+         </dropAssistant>
+      </navigatorContent>
+   </extension>
 
 </plugin>

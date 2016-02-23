@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ide
+Bundle-SymbolicName: org.eclipse.sphinx.examples.library.ide;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.eclipse.sphinx.examples.library.ide.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.sphinx.emf;bundle-version="0.9.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

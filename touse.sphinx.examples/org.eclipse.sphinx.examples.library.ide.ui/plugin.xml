@@ -76,7 +76,7 @@
          <propertyTab
                category="advanced"
                id="org.eclipse.sphinx.examples.library.ide.ui.propertyTabs.advanced"
-               label="Advancer">
+               label="Advanced">
          </propertyTab>
       </propertyTabs>
    </extension>
